@@ -3,4 +3,4 @@ project(TareaCorta1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(TareaCorta1 main.cpp Car.cpp Car.h Queue.h Node.h)
+add_executable(TareaCorta1 main.cpp Models/Car.cpp Models/Car.h Data_Structures/Queue.h Data_Structures/Node.h)

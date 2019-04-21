@@ -1,7 +1,8 @@
 #include <iostream>
 #include <stdlib.h>
 
-#include "Queue.h"
+#include "Data_Structures/Queue.h"
+#include "Models/Car.h"
 #include <string>
 
 
@@ -10,7 +11,7 @@
  * @return
  */
 int main() {
-    Queue<int> *queue = new Queue<int>;
+    /*Queue<int> *queue = new Queue<int>;
     while(true) {
         std::cout << "What do you wanna do?" << std::endl;
         std::cout << "Enter 1 to add a value to the queue" << std::endl;
@@ -43,5 +44,9 @@ int main() {
                 }
             }
         }
-    }
+    }*/
+
+    Car* test = new Car(2);
+    std::cout << *test->getProcess(3) << std::endl;
+
 }
