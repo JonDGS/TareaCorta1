@@ -7,6 +7,7 @@
 
 Car::Car(int type) {
     this->setType(type);
+    //this->time = new timer();
 }
 
 /**
@@ -65,4 +66,16 @@ void Car::setType(int type) {
  */
 int* Car::getProcess(int index) {
     return &this->process[index];
+}
+
+int* Car::getType() {
+    &this->type;
+}
+
+timer* Car::getTimer() {
+    return this->time;
+}
+
+bool Car::isDone() {
+    return this->done;
 }

@@ -3,6 +3,7 @@
 
 #include "Data_Structures/Queue.h"
 #include "Models/Car.h"
+#include "Models/timer.h"
 #include <string>
 
 
@@ -45,8 +46,4 @@ int main() {
             }
         }
     }*/
-
-    Car* test = new Car(2);
-    std::cout << *test->getProcess(3) << std::endl;
-
 }
