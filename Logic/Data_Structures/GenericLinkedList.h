@@ -117,6 +117,11 @@ int* GenericLinkedList<T>::getLength() {
     return &this->length;
 }
 
+
+/**
+ * This function prints the content of all of the nodes one by one
+ * @tparam T
+ */
 template<class T>
 void GenericLinkedList<T>::printList() {
     for(int i = 0; i < this->length; i++){

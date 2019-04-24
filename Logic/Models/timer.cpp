@@ -12,6 +12,9 @@ timer::timer() {
 }
 
 
+/**
+ * starts the timer, if the timer was pause it starts it right from where it left off
+ */
 void timer::start() {
     if(! running) {
         if(resetted)
@@ -23,7 +26,9 @@ void timer::start() {
     }
 }
 
-
+/**
+ * Stops the clock
+ */
 void timer::stop() {
     if(running) {
         end = (unsigned long) clock();
@@ -31,7 +36,9 @@ void timer::stop() {
     }
 }
 
-
+/**
+ * Resets the timer back to 0
+ */
 void timer::reset() {
     bool wereRunning = running;
     if(wereRunning)
@@ -43,12 +50,18 @@ void timer::reset() {
         start();
 }
 
-
+/**
+ * Tells whether the timer is in a start state
+ * @return boolean whether timer is currently running
+ */
 bool timer::isRunning() {
     return running;
 }
 
-
+/**
+ * Return the current elapsed time
+ * @return long time
+ */
 unsigned long timer::getTime() {
     if(running)
         return ((unsigned long) clock() - beg) / CLOCKS_PER_SEC;
@@ -56,7 +69,11 @@ unsigned long timer::getTime() {
         return end - beg;
 }
 
-
+/**
+ * Returns whether the timer is passed "n" seconds
+ * @param seconds
+ * @return
+ */
 bool timer::isOver(unsigned long seconds) {
     return seconds <= getTime();
 }

@@ -56,6 +56,10 @@ void Boss::startProduction(Car* newCar) {
     }
 }
 
+/**
+ * Returns the timer for the mainQueue
+ * @return timer for main queue
+ */
 timer *Boss::getTimer() {
     return this->currentTime;
 }

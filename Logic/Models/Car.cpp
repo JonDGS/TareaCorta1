@@ -68,14 +68,27 @@ int* Car::getProcess(int index) {
     return &this->process[index];
 }
 
+
+/**
+ * This function returns a pointer to the type of car THIS is
+ * @return integer that determines the type
+ */
 int* Car::getType() {
     &this->type;
 }
 
+/**
+ * Function that returns the timer of the current car
+ * @return pointer to timer
+ */
 timer* Car::getTimer() {
     return this->time;
 }
 
+/**
+ * This function tells whether the car is done and should exit the factory
+ * @return boolean whether is done
+ */
 bool Car::isDone() {
     return this->done;
 }
