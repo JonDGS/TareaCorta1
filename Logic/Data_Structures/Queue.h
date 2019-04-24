@@ -30,7 +30,11 @@ public:
 template <class T>
 void Queue<T>::setNewHead() {
     Node<T>* temp = this->head;
-    this->head = temp->getNext();
+    if(temp->getNext() == nullptr){
+        this->head = nullptr;
+    }else {
+        this->head = temp->getNext();
+    }
 }
 
 /**
@@ -63,10 +67,12 @@ void Queue<T>::addData(T data) {
 template <class T>
 T Queue<T>::getHead() {
     Node<T>* temp = this->head;
-    T datacpy = temp->getData();
-    setNewHead();
-    delete(temp);
-    return datacpy;
+    if(temp != nullptr) {
+        T datacpy = temp->getData();
+        setNewHead();
+        delete (temp);
+        return datacpy;
+    }return NULL;
 }
 
 

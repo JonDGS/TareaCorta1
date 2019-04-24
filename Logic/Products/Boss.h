@@ -12,10 +12,13 @@
 
 class Boss{
 private:
-    GenericLinkedList<ProcessManager*>* productionLine;
+    GenericLinkedList<ProcessManager*>* productionLine = new GenericLinkedList<ProcessManager*>();
     Queue<Car*>* mainQueue = new Queue<Car*>;
+    timer* currentTime;
 public:
     Boss();
+    timer* getTimer();
+    void startProduction(Car*);
     void addToTheQueue(Car*);
     void getHeadIntoProduction();
     void updateLines();

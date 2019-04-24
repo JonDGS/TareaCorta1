@@ -4,6 +4,7 @@
 #include "Data_Structures/Queue.h"
 #include "Models/Car.h"
 #include "Models/timer.h"
+#include "Products/Boss.h"
 #include <string>
 
 
@@ -46,4 +47,26 @@ int main() {
             }
         }
     }*/
+    Boss* boss = new Boss();
+    boss->startProduction(new Car(1));
+    boss->startProduction(new Car(1));
+    boss->startProduction(new Car(1));
+    boss->startProduction(new Car(1));
+    boss->startProduction(new Car(2));
+    boss->startProduction(new Car(2));
+    boss->startProduction(new Car(2));
+    boss->startProduction(new Car(2));
+    boss->startProduction(new Car(3));
+    boss->startProduction(new Car(3));
+    boss->startProduction(new Car(3));
+    boss->startProduction(new Car(3));
+    while(true){
+        boss->updateLines();
+        if(boss->getTimer()->isOver(5)){
+            std::cout << "5 seconds have passed" << std::endl;
+            boss->getHeadIntoProduction();
+            boss->getTimer()->reset();
+            boss->getTimer()->start();
+        }
+    }
 }

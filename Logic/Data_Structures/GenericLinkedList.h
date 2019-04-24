@@ -21,6 +21,7 @@ public:
     GenericNode<T>* get(int);
     GenericNode<T>* getHead();
     int* getLength();
+    void printList();
 private:
     GenericNode<T>* header;
     int length;
@@ -52,6 +53,7 @@ void GenericLinkedList<T>::add(T data) {
         this->header = temp;
         this->length++;
     }
+    std::cout << "Added " << data << " to the list" << std::endl;
 }
 
 /**
@@ -79,15 +81,18 @@ GenericNode<T>* GenericLinkedList<T>::get(int i) {
  */
 template <class T>
 void GenericLinkedList<T>::remove(int i) {
+    this->length--;
     if(i == 1){
         GenericNode<T>* temp = this->header;
         this->header = this->header->getNext();
         //delete(temp);
     }else {
-        GenericNode<T>* tmp = get(i);
+        GenericNode<T> *tmp = get(i);
         GenericNode<T> *temp = get(i - 1);
-        GenericNode<T> *temp1 = get(i + 1);
-        temp->setNext(temp1);
+        if (temp != nullptr) {
+            GenericNode<T> *temp1 = get(i + 1);
+            temp->setNext(temp1);
+        }
         //delete(tmp);
     }
 }
@@ -110,6 +115,13 @@ GenericNode<T> *GenericLinkedList<T>::getHead() {
 template <class T>
 int* GenericLinkedList<T>::getLength() {
     return &this->length;
+}
+
+template<class T>
+void GenericLinkedList<T>::printList() {
+    for(int i = 0; i < this->length; i++){
+        std::cout << "Node data is " << this->get(i)->getData() << std::endl;
+    }
 }
 
 
