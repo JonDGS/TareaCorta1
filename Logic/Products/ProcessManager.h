@@ -13,8 +13,9 @@ class ProcessManager{
 private:
     GenericLinkedList<Car*>* agenda = new GenericLinkedList<Car*>;
     bool full = false;
+    int identifier;
 public:
-    ProcessManager();
+    ProcessManager(int);
     bool isFull();
     Car* newProcess(Car*);
     void updateLine();

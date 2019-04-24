@@ -7,7 +7,7 @@
 
 Car::Car(int type) {
     this->setType(type);
-    //this->time = new timer();
+    this->time = new timer();
 }
 
 /**

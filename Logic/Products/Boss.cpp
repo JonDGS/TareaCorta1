@@ -4,6 +4,12 @@
 
 #include "Boss.h"
 
+Boss::Boss() {
+    for(int i = 0; i < 6; i++){
+        this->productionLine->add(new ProcessManager(i));
+    }
+}
+
 void Boss::addToTheQueue(Car* newCar) {
     this->mainQueue->addData(newCar);
 }

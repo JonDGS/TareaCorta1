@@ -15,6 +15,7 @@ private:
     GenericLinkedList<ProcessManager*>* productionLine;
     Queue<Car*>* mainQueue = new Queue<Car*>;
 public:
+    Boss();
     void addToTheQueue(Car*);
     void getHeadIntoProduction();
     void updateLines();

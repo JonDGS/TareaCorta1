@@ -16,7 +16,7 @@ private:
     timer* time;
 public:
     Car(int);
-    void setProcess(int, int, int, int, int,int);
+    void setProcess(int, int, int, int, int, int);
     void setType(int);
     int* getProcess(int);
     int* getType();
