@@ -1,0 +1,67 @@
+\hypertarget{class_boss}{}\section{Boss Class Reference}
+\label{class_boss}\index{Boss@{Boss}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtimer}{timer}} $\ast$ \mbox{\hyperlink{class_boss_a95c7ec846f41a2739929afee235f21c8}{get\+Timer}} ()
+\item 
+void \mbox{\hyperlink{class_boss_a9db6a91b8ddacb6258923352a8fb2d8e}{start\+Production}} (\mbox{\hyperlink{class_car}{Car}} $\ast$)
+\item 
+void \mbox{\hyperlink{class_boss_ac507d93e21fb29ad8c621988ed8e98e7}{add\+To\+The\+Queue}} (\mbox{\hyperlink{class_car}{Car}} $\ast$)
+\item 
+void \mbox{\hyperlink{class_boss_a923846754239842186339c9c9ab531e0}{get\+Head\+Into\+Production}} ()
+\item 
+void \mbox{\hyperlink{class_boss_a6b221d96706333ee2fe5a2562d6fa94e}{update\+Lines}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_boss_ac507d93e21fb29ad8c621988ed8e98e7}\label{class_boss_ac507d93e21fb29ad8c621988ed8e98e7}} 
+\index{Boss@{Boss}!addToTheQueue@{addToTheQueue}}
+\index{addToTheQueue@{addToTheQueue}!Boss@{Boss}}
+\subsubsection{\texorpdfstring{addToTheQueue()}{addToTheQueue()}}
+{\footnotesize\ttfamily void Boss\+::add\+To\+The\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_car}{Car}} $\ast$}]{new\+Car }\end{DoxyParamCaption})}
+
+Adds a car to queue of waiting cars 
+\begin{DoxyParams}{Parameters}
+{\em new\+Car} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_boss_a923846754239842186339c9c9ab531e0}\label{class_boss_a923846754239842186339c9c9ab531e0}} 
+\index{Boss@{Boss}!getHeadIntoProduction@{getHeadIntoProduction}}
+\index{getHeadIntoProduction@{getHeadIntoProduction}!Boss@{Boss}}
+\subsubsection{\texorpdfstring{getHeadIntoProduction()}{getHeadIntoProduction()}}
+{\footnotesize\ttfamily void Boss\+::get\+Head\+Into\+Production (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the head of the main queue an assigns it to a production line \mbox{\Hypertarget{class_boss_a95c7ec846f41a2739929afee235f21c8}\label{class_boss_a95c7ec846f41a2739929afee235f21c8}} 
+\index{Boss@{Boss}!getTimer@{getTimer}}
+\index{getTimer@{getTimer}!Boss@{Boss}}
+\subsubsection{\texorpdfstring{getTimer()}{getTimer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtimer}{timer}} $\ast$ Boss\+::get\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the timer for the main\+Queue \begin{DoxyReturn}{Returns}
+timer for main queue 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_boss_a9db6a91b8ddacb6258923352a8fb2d8e}\label{class_boss_a9db6a91b8ddacb6258923352a8fb2d8e}} 
+\index{Boss@{Boss}!startProduction@{startProduction}}
+\index{startProduction@{startProduction}!Boss@{Boss}}
+\subsubsection{\texorpdfstring{startProduction()}{startProduction()}}
+{\footnotesize\ttfamily void Boss\+::start\+Production (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_car}{Car}} $\ast$}]{new\+Car }\end{DoxyParamCaption})}
+
+Request a line to take car of a new arrival of a \mbox{\hyperlink{class_car}{Car}} 
+\begin{DoxyParams}{Parameters}
+{\em new\+Car} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_boss_a6b221d96706333ee2fe5a2562d6fa94e}\label{class_boss_a6b221d96706333ee2fe5a2562d6fa94e}} 
+\index{Boss@{Boss}!updateLines@{updateLines}}
+\index{updateLines@{updateLines}!Boss@{Boss}}
+\subsubsection{\texorpdfstring{updateLines()}{updateLines()}}
+{\footnotesize\ttfamily void Boss\+::update\+Lines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Request every line to update its list 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Logic/\+Products/Boss.\+h\item 
+Logic/\+Products/Boss.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,52 @@
+\hypertarget{class_process_manager}{}\section{Process\+Manager Class Reference}
+\label{class_process_manager}\index{ProcessManager@{ProcessManager}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_process_manager_a12ee59a496abcc1c88f17cd303282587}\label{class_process_manager_a12ee59a496abcc1c88f17cd303282587}} 
+{\bfseries Process\+Manager} (int)
+\item 
+bool \mbox{\hyperlink{class_process_manager_a207531dd7b8856cf5d1b538f97e14dd0}{is\+Full}} ()
+\item 
+\mbox{\hyperlink{class_car}{Car}} $\ast$ \mbox{\hyperlink{class_process_manager_a19e3e92e9da27c4f8cac960f444060c1}{new\+Process}} (\mbox{\hyperlink{class_car}{Car}} $\ast$)
+\item 
+void \mbox{\hyperlink{class_process_manager_a2f02ec25277925232289f75930d35a21}{update\+Line}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_process_manager_a207531dd7b8856cf5d1b538f97e14dd0}\label{class_process_manager_a207531dd7b8856cf5d1b538f97e14dd0}} 
+\index{ProcessManager@{ProcessManager}!isFull@{isFull}}
+\index{isFull@{isFull}!ProcessManager@{ProcessManager}}
+\subsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily bool Process\+Manager\+::is\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function returns whether or not the agenda is full \begin{DoxyReturn}{Returns}
+boolean indicating is the agenda is full 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_process_manager_a19e3e92e9da27c4f8cac960f444060c1}\label{class_process_manager_a19e3e92e9da27c4f8cac960f444060c1}} 
+\index{ProcessManager@{ProcessManager}!newProcess@{newProcess}}
+\index{newProcess@{newProcess}!ProcessManager@{ProcessManager}}
+\subsubsection{\texorpdfstring{newProcess()}{newProcess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_car}{Car}} $\ast$ Process\+Manager\+::new\+Process (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_car}{Car}} $\ast$}]{process }\end{DoxyParamCaption})}
+
+Manages the arrival of new process and a \mbox{\hyperlink{class_car}{Car}} if it full to take care of the new process 
+\begin{DoxyParams}{Parameters}
+{\em process} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_car}{Car}} that has been throw out of the line 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_process_manager_a2f02ec25277925232289f75930d35a21}\label{class_process_manager_a2f02ec25277925232289f75930d35a21}} 
+\index{ProcessManager@{ProcessManager}!updateLine@{updateLine}}
+\index{updateLine@{updateLine}!ProcessManager@{ProcessManager}}
+\subsubsection{\texorpdfstring{updateLine()}{updateLine()}}
+{\footnotesize\ttfamily void Process\+Manager\+::update\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if any cars are done and removes them from the list 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Logic/\+Products/Process\+Manager.\+h\item 
+Logic/\+Products/Process\+Manager.\+cpp\end{DoxyCompactItemize}

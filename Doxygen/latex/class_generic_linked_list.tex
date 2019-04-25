@@ -1,0 +1,153 @@
+\hypertarget{class_generic_linked_list}{}\section{Generic\+Linked\+List$<$ T $>$ Class Template Reference}
+\label{class_generic_linked_list}\index{GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Generic\+Linked\+List.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_generic_linked_list_a033d33e112de0f2ebc71731433ae8be5}{Generic\+Linked\+List}} ()
+\item 
+void \mbox{\hyperlink{class_generic_linked_list_aa7191b3a33a7adda5d7bc9dd156b77d9}{add}} (T)
+\item 
+void \mbox{\hyperlink{class_generic_linked_list_aa22b730a9dfd611f0ba6c0704f5125b5}{remove}} (int)
+\item 
+\mbox{\hyperlink{class_generic_node}{Generic\+Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_generic_linked_list_a59b8bfebf18e1d167967ecfbe8172049}{get}} (int)
+\item 
+\mbox{\hyperlink{class_generic_node}{Generic\+Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_generic_linked_list_a8b21f9bbec56f257569e2c0eebee14d3}{get\+Head}} ()
+\item 
+int $\ast$ \mbox{\hyperlink{class_generic_linked_list_a73dcf0c040fee02a926ee1dbf2d84227}{get\+Length}} ()
+\item 
+void \mbox{\hyperlink{class_generic_linked_list_aeac472d4f88ca7a74d9507a1ea46e8a5}{print\+List}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Generic\+Linked\+List$<$ T $>$}
+
+Class use for storing any type of object 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_generic_linked_list_a033d33e112de0f2ebc71731433ae8be5}\label{class_generic_linked_list_a033d33e112de0f2ebc71731433ae8be5}} 
+\index{GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}!GenericLinkedList@{GenericLinkedList}}
+\index{GenericLinkedList@{GenericLinkedList}!GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{GenericLinkedList()}{GenericLinkedList()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_generic_linked_list}{Generic\+Linked\+List}}$<$ T $>$\+::\mbox{\hyperlink{class_generic_linked_list}{Generic\+Linked\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This constructor doesn\textquotesingle{}t take any parameters 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_generic_linked_list_aa7191b3a33a7adda5d7bc9dd156b77d9}\label{class_generic_linked_list_aa7191b3a33a7adda5d7bc9dd156b77d9}} 
+\index{GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}!add@{add}}
+\index{add@{add}!GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \mbox{\hyperlink{class_generic_linked_list}{Generic\+Linked\+List}}$<$ T $>$\+::add (\begin{DoxyParamCaption}\item[{T}]{data }\end{DoxyParamCaption})}
+
+This function creates a node with the data and sets it as a head 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_generic_linked_list_a59b8bfebf18e1d167967ecfbe8172049}\label{class_generic_linked_list_a59b8bfebf18e1d167967ecfbe8172049}} 
+\index{GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}!get@{get}}
+\index{get@{get}!GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_generic_node}{Generic\+Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_generic_linked_list}{Generic\+Linked\+List}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+This function returns the node in index i 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Generic\+Node$<$\+T$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_generic_linked_list_a8b21f9bbec56f257569e2c0eebee14d3}\label{class_generic_linked_list_a8b21f9bbec56f257569e2c0eebee14d3}} 
+\index{GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}!getHead@{getHead}}
+\index{getHead@{getHead}!GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{getHead()}{getHead()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_generic_node}{Generic\+Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_generic_linked_list}{Generic\+Linked\+List}}$<$ T $>$\+::get\+Head (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function returns the head of the linkedlist 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Generic\+Node$<$\+T$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_generic_linked_list_a73dcf0c040fee02a926ee1dbf2d84227}\label{class_generic_linked_list_a73dcf0c040fee02a926ee1dbf2d84227}} 
+\index{GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}!getLength@{getLength}}
+\index{getLength@{getLength}!GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int $\ast$ \mbox{\hyperlink{class_generic_linked_list}{Generic\+Linked\+List}}$<$ T $>$\+::get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function returns the length of the linkedlist 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_generic_linked_list_aeac472d4f88ca7a74d9507a1ea46e8a5}\label{class_generic_linked_list_aeac472d4f88ca7a74d9507a1ea46e8a5}} 
+\index{GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}!printList@{printList}}
+\index{printList@{printList}!GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{printList()}{printList()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_generic_linked_list}{Generic\+Linked\+List}}$<$ T $>$\+::print\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function prints the content of all of the nodes one by one 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{class_generic_linked_list_aa22b730a9dfd611f0ba6c0704f5125b5}\label{class_generic_linked_list_aa22b730a9dfd611f0ba6c0704f5125b5}} 
+\index{GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!GenericLinkedList$<$ T $>$@{GenericLinkedList$<$ T $>$}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_generic_linked_list}{Generic\+Linked\+List}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+This function removes the node on index i 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Logic/\+Data\+\_\+\+Structures/Generic\+Linked\+List.\+h\end{DoxyCompactItemize}

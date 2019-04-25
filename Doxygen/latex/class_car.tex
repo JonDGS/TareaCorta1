@@ -1,0 +1,102 @@
+\hypertarget{class_car}{}\section{Car Class Reference}
+\label{class_car}\index{Car@{Car}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_car_a712e9d46304d34a0c35e38184c400a35}\label{class_car_a712e9d46304d34a0c35e38184c400a35}} 
+{\bfseries Car} (int)
+\item 
+void \mbox{\hyperlink{class_car_a231f37919a88d434119f897efbebeaf3}{set\+Process}} (int, int, int, int, int, int)
+\item 
+void \mbox{\hyperlink{class_car_a577954053d9a27526ec1e5fbe4cbabd4}{set\+Type}} (int)
+\item 
+int $\ast$ \mbox{\hyperlink{class_car_a70fdfc2872daea9cde1a29b80a54de2a}{get\+Process}} (int)
+\item 
+int $\ast$ \mbox{\hyperlink{class_car_a0ce6ed79b6d381a497edf7ddff6192d5}{get\+Type}} ()
+\item 
+\mbox{\hyperlink{classtimer}{timer}} $\ast$ \mbox{\hyperlink{class_car_a47c5f8f522ab36d22f9b70521da89356}{get\+Timer}} ()
+\item 
+bool \mbox{\hyperlink{class_car_a63876f3d899700e7ba60f51d71a85b23}{is\+Done}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_car_a70fdfc2872daea9cde1a29b80a54de2a}\label{class_car_a70fdfc2872daea9cde1a29b80a54de2a}} 
+\index{Car@{Car}!getProcess@{getProcess}}
+\index{getProcess@{getProcess}!Car@{Car}}
+\subsubsection{\texorpdfstring{getProcess()}{getProcess()}}
+{\footnotesize\ttfamily int $\ast$ Car\+::get\+Process (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+Get the time an specific process takes base on the index, process A being 0 and so on 
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_car_a47c5f8f522ab36d22f9b70521da89356}\label{class_car_a47c5f8f522ab36d22f9b70521da89356}} 
+\index{Car@{Car}!getTimer@{getTimer}}
+\index{getTimer@{getTimer}!Car@{Car}}
+\subsubsection{\texorpdfstring{getTimer()}{getTimer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtimer}{timer}} $\ast$ Car\+::get\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that returns the timer of the current car \begin{DoxyReturn}{Returns}
+pointer to timer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_car_a0ce6ed79b6d381a497edf7ddff6192d5}\label{class_car_a0ce6ed79b6d381a497edf7ddff6192d5}} 
+\index{Car@{Car}!getType@{getType}}
+\index{getType@{getType}!Car@{Car}}
+\subsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily int $\ast$ Car\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function returns a pointer to the type of car T\+H\+IS is \begin{DoxyReturn}{Returns}
+integer that determines the type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_car_a63876f3d899700e7ba60f51d71a85b23}\label{class_car_a63876f3d899700e7ba60f51d71a85b23}} 
+\index{Car@{Car}!isDone@{isDone}}
+\index{isDone@{isDone}!Car@{Car}}
+\subsubsection{\texorpdfstring{isDone()}{isDone()}}
+{\footnotesize\ttfamily bool Car\+::is\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function tells whether the car is done and should exit the factory \begin{DoxyReturn}{Returns}
+boolean whether is done 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_car_a231f37919a88d434119f897efbebeaf3}\label{class_car_a231f37919a88d434119f897efbebeaf3}} 
+\index{Car@{Car}!setProcess@{setProcess}}
+\index{setProcess@{setProcess}!Car@{Car}}
+\subsubsection{\texorpdfstring{setProcess()}{setProcess()}}
+{\footnotesize\ttfamily void Car\+::set\+Process (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{c,  }\item[{int}]{d,  }\item[{int}]{e,  }\item[{int}]{f }\end{DoxyParamCaption})}
+
+This function assigns a value meant to be read as seconds to each process starting from processA 
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+{\em c} & \\
+\hline
+{\em d} & \\
+\hline
+{\em e} & \\
+\hline
+{\em f} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_car_a577954053d9a27526ec1e5fbe4cbabd4}\label{class_car_a577954053d9a27526ec1e5fbe4cbabd4}} 
+\index{Car@{Car}!setType@{setType}}
+\index{setType@{setType}!Car@{Car}}
+\subsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void Car\+::set\+Type (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+Sets the type of car this object is going to be 
+\begin{DoxyParams}{Parameters}
+{\em type} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Logic/\+Models/Car.\+h\item 
+Logic/\+Models/Car.\+cpp\end{DoxyCompactItemize}
