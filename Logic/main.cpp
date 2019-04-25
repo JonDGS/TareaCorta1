@@ -6,6 +6,7 @@
 #include "Models/timer.h"
 #include "Products/Boss.h"
 #include <string>
+#include <sstream>
 
 
 /**
@@ -13,60 +14,108 @@
  * @return
  */
 int main() {
-    /*Queue<int> *queue = new Queue<int>;
     while(true) {
-        std::cout << "What do you wanna do?" << std::endl;
-        std::cout << "Enter 1 to add a value to the queue" << std::endl;
-        std::cout << "Enter 2 get the first value of the queue" << std::endl;
-        std::cout << "Enter 3 to print the current queue" << std::endl;
-        std::cout << "Enter 4 to just print out the current head" << std::endl;
+        std::cout << "Which option do you wanna use" << std::endl;
+        std::cout << "Enter 1 for 3 Type 1 Cars" << std::endl;
+        std::cout << "Enter 2 for 4 Type 1 Cars and 3 Type 4 Cars" << std::endl;
+        std::cout << "Enter 3 for 2 Type 3 Cars and 1 Type 5 Car" << std::endl;
+        std::cout << "Enter 4 for 4 Type 3 Cars, 4 Type 2 and 4 Type 1" << std::endl;
+        std::cout << "Enter 5 to exit the menu" << std::endl;
         std::string input;
         std::cin >> input;
-        if (input == "1") {
-            std::cout << "Which value do you wanna store?: ";
-            int value;
-            std::cin >> value;
-            std::cout << std::endl;
-            queue->addData(value);
-            std::cout << "Value saved" << std::endl;
-        }else{
-            if(input == "2"){
-                int head = queue->getHead();
-                std::cout << "The value in the head right now is " << head << std::endl;
-            }else{
-                if(input == "3"){
-                    queue->printQueue();
-                }else{
-                    if(input == "4"){
-                        int head = queue->readHead();
-                        std::cout << "The value is " << head << std::endl;
-                    }else{
-                        std::cout << "Use one of the options provided above" << std::endl;
+        std::stringstream ss(input);
+        int num;
+        ss >> num;
+        switch(num){
+            default:
+                return 20;
+            case 1:{
+                Boss *boss = new Boss();
+                timer *time = new timer;
+                time->start();
+                boss->startProduction(new Car(1));
+                boss->startProduction(new Car(1));
+                boss->startProduction(new Car(1));
+                while (!time->isOver(15)) {
+                    boss->updateLines();
+                    if (boss->getTimer()->isOver(5)) {
+                        std::cout << "5 seconds have passed" << std::endl;
+                        boss->getHeadIntoProduction();
+                        boss->getTimer()->reset();
+                        boss->getTimer()->start();
                     }
                 }
+                break;
             }
-        }
-    }*/
-    Boss* boss = new Boss();
-    boss->startProduction(new Car(1));
-    boss->startProduction(new Car(1));
-    boss->startProduction(new Car(1));
-    boss->startProduction(new Car(1));
-    boss->startProduction(new Car(2));
-    boss->startProduction(new Car(2));
-    boss->startProduction(new Car(2));
-    boss->startProduction(new Car(2));
-    boss->startProduction(new Car(3));
-    boss->startProduction(new Car(3));
-    boss->startProduction(new Car(3));
-    boss->startProduction(new Car(3));
-    while(true){
-        boss->updateLines();
-        if(boss->getTimer()->isOver(5)){
-            std::cout << "5 seconds have passed" << std::endl;
-            boss->getHeadIntoProduction();
-            boss->getTimer()->reset();
-            boss->getTimer()->start();
+            case 2: {
+                Boss *boss = new Boss();
+                timer *time = new timer;
+                time->start();
+                boss->startProduction(new Car(1));
+                boss->startProduction(new Car(1));
+                boss->startProduction(new Car(1));
+                boss->startProduction(new Car(1));
+                boss->startProduction(new Car(4));
+                boss->startProduction(new Car(4));
+                boss->startProduction(new Car(4));
+                while (!time->isOver(20)) {
+                    boss->updateLines();
+                    if (boss->getTimer()->isOver(5)) {
+                        std::cout << "5 seconds have passed" << std::endl;
+                        boss->getHeadIntoProduction();
+                        boss->getTimer()->reset();
+                        boss->getTimer()->start();
+                    }
+                }
+                break;
+            }
+            case 3:{
+                Boss *boss = new Boss();
+                timer *time = new timer;
+                time->start();
+                boss->startProduction(new Car(3));
+                boss->startProduction(new Car(3));
+                boss->startProduction(new Car(5));
+                while (!time->isOver(10)) {
+                    boss->updateLines();
+                    if (boss->getTimer()->isOver(5)) {
+                        std::cout << "5 seconds have passed" << std::endl;
+                        boss->getHeadIntoProduction();
+                        boss->getTimer()->reset();
+                        boss->getTimer()->start();
+                    }
+                }
+                break;
+            }
+            case 4:{
+                Boss *boss = new Boss();
+                timer *time = new timer;
+                time->start();
+                boss->startProduction(new Car(1));
+                boss->startProduction(new Car(1));
+                boss->startProduction(new Car(1));
+                boss->startProduction(new Car(1));
+                boss->startProduction(new Car(2));
+                boss->startProduction(new Car(2));
+                boss->startProduction(new Car(2));
+                boss->startProduction(new Car(2));
+                boss->startProduction(new Car(3));
+                boss->startProduction(new Car(3));
+                boss->startProduction(new Car(3));
+                boss->startProduction(new Car(3));
+                while (!time->isOver(35)) {
+                    boss->updateLines();
+                    if (boss->getTimer()->isOver(5)) {
+                        std::cout << "5 seconds have passed" << std::endl;
+                        boss->getHeadIntoProduction();
+                        boss->getTimer()->reset();
+                        boss->getTimer()->start();
+                    }
+                }
+                break;
+            }
+            case 5:
+                return 0;
         }
     }
 }
