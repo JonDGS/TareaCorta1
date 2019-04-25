@@ -50,7 +50,7 @@ void Boss::updateLines() {
  */
 void Boss::startProduction(Car* newCar) {
     int type = *newCar->getType();
-    Car* result = this->productionLine->get(type)->getData()->newProcess(newCar);
+    Car* result = this->productionLine->get(type - 1)->getData()->newProcess(newCar);
     if(result != nullptr){
         mainQueue->addData(result);
     }
